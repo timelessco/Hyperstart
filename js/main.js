@@ -13,6 +13,9 @@ $(document).ready(function() {
 
     addAndRemoveClassOneByOne();
 
+
+
+
 });
 
  // Function to add and remove a class to each div one by one
