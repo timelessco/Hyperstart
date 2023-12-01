@@ -7,6 +7,13 @@
     transition: all 0.25s ease-in-out 0s;
 } */
 
+:root {
+    --size: clamp(10rem, 1rem + 40vmin, 30rem);
+    --gap: calc(var(--size) / 14);
+    --duration: 60s;
+    --scroll-start: 0;
+    --scroll-end: calc(-100% - var(--gap));
+  }
 html {
     color: #151A1F;
     font-size: 16px;
@@ -513,10 +520,31 @@ ul li {
     margin-right: 4.625rem;
 }
 
-.logo-list a:last-child {
+/* .logo-list a:last-child {
     margin-right: 0;
-}
-
+} */
+.marquee {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+  }
+  .marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll-x var(--duration) linear infinite;
+  }
+  @keyframes scroll-x {
+    from {
+      transform: translateX(var(--scroll-start));
+    }
+    to {
+      transform: translateX(var(--scroll-end));
+    }
+  }
 /* section-logo - End */
 
 /* section one platform - Starts */
