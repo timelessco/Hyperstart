@@ -80,12 +80,10 @@ function thumbCarousal() {
   
         console.log('Selected Slide:', selected);
   
-        // Add 'is-selected' class to all thumbnails up to the clicked thumbnail
         for (let i = 0; i <= selected; i++) {
           thumbCarousel.slideNodes()[i].classList.add('is-selected');
         }
   
-        // Remove 'is-selected' class from subsequent thumbnails
         for (let i = selected + 1; i < thumbCarousel.slideNodes().length; i++) {
           thumbCarousel.slideNodes()[i].classList.remove('is-selected');
         }
