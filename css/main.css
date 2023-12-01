@@ -769,6 +769,24 @@ ul li {
     padding: 8.125rem 0 10.75rem 0;
 }
 
+.section-why-hyperstart-clm h2 span{
+    position: relative;
+    display: inline-flex;
+    z-index: 1;
+}
+.section-why-hyperstart-clm h2 span::after{
+    position: absolute;
+    content: '';
+    width: 122px;
+    height: 16px;
+    background-color: #C7C8FF;
+    left: 0;
+    bottom: -6px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: rotate(-3deg);
+}
 .clm-list {
     width: 33.333%;
     padding: 0 15px;
@@ -845,5 +863,507 @@ ul li {
 .clm-list .clm-list-content:last-child {
     margin-bottom: 0;
 }
-
+.clm-list-content:hover,
+.clm-list-selected{
+    background-color: #FFFFFF;
+}
 /* section-why-hyperstart-clm - End */
+
+
+
+
+/* Padhu - Styles */
+
+/* section-pricing style starts */
+.section-pricing {
+    padding-top: 8.5rem;
+    padding-bottom: 12.25rem;
+    background-color: #ffffff;
+  }
+  
+  .pricing-card-wrapper {
+    display: flex;
+    padding-top: 5.75rem;
+    margin-right: -12px;
+    margin-left: -12px;
+  }
+  
+  .pricing-card-container {
+    padding: 0 11px;
+    width: 33.33%;
+  }
+  
+  .pricing-card {
+    border: 1px solid #e9eaf0;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    fill: #fff;
+    stroke-width: 1px;
+    stroke: #e9eaf0;
+    opacity: 0.88;
+    filter: drop-shadow(0px 10px 20px rgba(135, 135, 135, 0.08));
+    background-color: #ffffff;
+  }
+  
+  .price-detail-block {
+    padding: 2rem 2rem 0px 2rem;
+  }
+  
+  .badge {
+    padding: 5px 10px;
+    border-radius: 17px;
+    background: #e8e4fd;
+    display: inline-flex;
+  }
+  
+  .badge p {
+    color: #000;
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 24px;
+  }
+  
+  .price-block {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: 1.75rem;
+    padding-top: 1.875rem;
+    border-bottom: 1px solid #e9eaf0;
+  }
+  
+  .price-img-block {
+    flex: 1;
+  }
+  
+  .price-img-block p {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37.2px;
+    letter-spacing: 0.3px;
+  }
+  
+  .img-block {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+  
+  .img-block p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22.32px;
+    letter-spacing: 0.18px;
+    padding-left: 8px;
+  }
+  
+  .price-block .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 8px;
+    border: 1px solid #e9eaf0;
+    box-shadow: 0px 1px 4px 0px rgba(144, 144, 154, 0.04);
+    line-height: 1;
+  }
+  
+  .price-block .btn:hover,
+  .price-block .btn:active,
+  .price-block .btn:focus {
+    border: 1px solid #e9eaf0;
+    background-color: #e9eaf0;
+  }
+  
+  .plan-detail-block li {
+    color: #151414;
+    font-size: 17px;
+    font-weight: 432;
+    line-height: 24.31px;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+    padding-left: 1.625rem;
+    position: relative;
+  }
+  
+  .plan-detail-block {
+    padding: 2.625rem 2rem 2.375rem 2rem;
+    background-color: #fcfcfc;
+    border-radius: 0 0 25px 25px;
+    height: 100%;
+    position: relative;
+  }
+  
+  .pricing-card-container:first-child .plan-detail-block {
+    padding: 2rem 2rem 2.375rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  .plan-detail-block li:last-child {
+    padding-bottom: 0;
+  }
+  .plan-detail-block li::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/svg/check-list-icon.svg);
+    left: 0;
+    top: 4px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .enterprise-plan-card .price-detail-block {
+    background-color: #e7e2ff;
+    border-radius: 25px 25px 0 0;
+    margin: -1px;
+  }
+  
+  .enterprise-plan-card .price-img-block p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17.68px;
+    letter-spacing: 0.13px;
+    padding-right: 10px;
+  }
+  
+  .enterprise-plan-card .badge {
+    background-color: #ffffff;
+  }
+  
+  .included-plan-block {
+    padding: 26px 24px 28px 24px;
+    border-bottom: 1px solid #e9eaf0;
+    position: relative;
+  }
+  
+  .included-plan-block::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/svg/plan-card-add-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: -43.5px;
+    left: 32px;
+    width: 14px;
+    height: 76px;
+    z-index: 1;
+  }
+  
+  .included-plan {
+    align-items: center;
+    padding: 5px 12px 5px 10px;
+    background-color: #f4f5f6;
+    border-radius: 25px;
+    display: inline-flex;
+  }
+  
+  .enterprise-plan-card .included-plan {
+    background-color: #e9eaec;
+  }
+  
+  .included-plan p {
+    color: #151414;
+    font-size: 17px;
+    font-weight: 430;
+    line-height: 24.31px;
+    padding-left: 10px;
+  }
+  /* section-pricing style end */
+  
+  /* section-product-hyperverge style starts */
+  
+  .section-product-hyperverge {
+    background-color: #f6f6fb;
+    padding-top: 5.5rem;
+    padding-bottom: 11rem;
+  }
+  
+  .product-hyperverge-contentes-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left-contents-block {
+    max-width: 489px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .right-contents-block {
+    max-width: 539px;
+    width: 100%;
+  }
+  
+  .rating-card {
+    padding: 10px 14px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0px 10px 30px 0px rgba(135, 135, 135, 0.06);
+  }
+  
+  .rating-card p {
+    color: #151414;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28.6px;
+    letter-spacing: 0.2px;
+  }
+  
+  .star-img {
+    margin-left: 8px;
+    margin-right: 10px;
+  }
+  
+  .product-text {
+    color: #151a1f;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.56px;
+    padding-top: 1.625rem;
+    padding-bottom: 1.375rem;
+  }
+  
+  .product-text span img {
+    width: 20px;
+    height: 24px;
+    margin-left: 8px;
+  }
+  
+  .reward-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .reward-container figure {
+    width: 62px;
+    height: 80px;
+    margin-right: 1.875rem;
+  }
+  
+  .reward-container figure:last-child {
+    margin-right: 0;
+  }
+  
+  .rating-block p {
+    color: #151a1f;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 36.18px;
+    letter-spacing: -0.54px;
+  }
+  
+  .security-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+  
+  .security-container figure {
+    width: 55px;
+    height: 55px;
+    margin-right: 1.25rem;
+  }
+  
+  .security-container figure:last-child {
+    margin-right: 0;
+  }
+  
+  .secure-block span {
+    color: #151414;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.8px;
+    letter-spacing: 0.2px;
+    display: block;
+  }
+  
+  .secure-block p {
+    color: #151414;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21.56px;
+    letter-spacing: -0.14px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+  
+  .secure-block .btn {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 18px;
+  }
+  
+  .brand-card-container {
+    margin-top: 5.5rem;
+    position: relative;
+  }
+  
+  .brand-card-container::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/svg/calender-img.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 146px;
+    height: 134px;
+    top: -102px;
+    right: 20px;
+  }
+  
+  .brand-card {
+    padding: 1.625rem 1.5rem 1rem 1.75rem;
+    border-radius: 20px;
+    border: 1px solid #f2f3f5;
+    background: #fff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .brand-card:nth-child(2) {
+    transform: rotate(1.353deg);
+  }
+  
+  .brand-card:nth-child(3) {
+    transform: rotate(-1.262deg);
+  }
+  
+  .brand-card:last-child {
+    margin-bottom: 0;
+  }
+  
+  .brand-card figure img {
+    width: auto;
+  }
+  
+  .brand-card p {
+    color: #151414;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.6px;
+    letter-spacing: 0.2px;
+    padding-top: 16px;
+  }
+  
+  /* section-product-hyperverge style starts */
+  
+  /* section-contract-management style starts */
+  .section-contract-management {
+    padding-top: 7.25rem;
+    padding-bottom: 11.625rem;
+  }
+  
+  .section-contract-management h2 {
+    max-width: 418px;
+    margin: 0 auto;
+  }
+  
+  .section-contract-management h2 span {
+    display: inline-flex;
+    position: relative;
+  }
+  
+  .section-contract-management h2 span::after {
+    position: absolute;
+    content: "";
+    width: 151px;
+    height: 29px;
+    left: -10px;
+    bottom: -15px;
+    background-image: url(../images/svg/line-orange-highlight.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
+  .contract-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 154px;
+    max-width: 1180px;
+    margin: 5.625rem auto 0 auto;
+  }
+  
+  .contract-card-container {
+    width: 50%;
+    display: flex;
+  }
+  
+  .contract-card-container:nth-child(even) {
+    justify-content: flex-end;
+  }
+  
+  .contract-card-container.active .contract-card,
+  .contract-card:hover {
+    background: #f7f6f9;
+  }
+  
+  .contract-card {
+    border-radius: 11px;
+    padding: 1.25rem 1.5rem;
+    max-width: 306px;
+    width: 100%;
+    transition: 150ms all;
+    position: relative;
+  }
+  
+  .contract-card p {
+    color: #151414;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28.6px;
+    letter-spacing: 0.2px;
+    padding-bottom: 1.125rem;
+    transition: 150ms all;
+  }
+  
+  .contract-card-container.active .contract-card p,
+  .contract-card:hover p {
+    color: #f06b0b;
+  }
+  
+  .contract-card li {
+    color: #2b2b2d;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24.31px;
+    letter-spacing: 0.17px;
+    padding-bottom: 15px;
+    padding-left: 14px;
+    position: relative;
+  }
+  
+  .contract-card li::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 9px;
+    border-radius: 1px;
+    background: #151414;
+    left: 0;
+    top: 7px;
+  }
+  
+  .contract-card li:last-child {
+    padding-bottom: 0;
+  }
+  
+  .contract-card figure {
+    position: absolute;
+      top: 20%;
+      left: 75%;
+      width: 150%;
+  }
+  /* section-contract-management style end */
+  

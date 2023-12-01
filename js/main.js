@@ -8,8 +8,41 @@ $(document).ready(function() {
             $(".site-header").removeClass("header-overlay");
         }
     });
+
+
+
+    addAndRemoveClassOneByOne();
+
 });
 
+ // Function to add and remove a class to each div one by one
+ const addAndRemoveClassOneByOne = () => {
+  let currentIndex = 0;
+
+  const addClass = () => {
+    console.log("currentIndex > 0",currentIndex > 0)
+    // Add class to the current div
+    $('.clm-list-content:eq(' + currentIndex + ')').addClass('clm-list-selected');
+
+    // Remove class from the previous div (if not the first div)
+    if (currentIndex > 0) {
+      $('.clm-list-content:eq(' + (currentIndex - 1) + ')').removeClass('clm-list-selected');
+    }
+
+    currentIndex++;
+
+    // Reset to the first div if reached the last div
+    if (currentIndex >= $('.clm-list-content').length) {
+      currentIndex = 0;
+    }
+
+    // Call the function recursively with a time interval
+    setTimeout(addClass, 2000); // Add a class every 2000 milliseconds (2 seconds) interval
+  };
+
+  // Call the function initially
+  addClass();
+};
 
 
 
@@ -78,8 +111,6 @@ function thumbCarousal() {
     const selectThumbBtn = (mainCarousel, thumbCarousel) => {
         const selected = mainCarousel.selectedScrollSnap();
   
-        console.log('Selected Slide:', selected);
-  
         for (let i = 0; i <= selected; i++) {
           thumbCarousel.slideNodes()[i].classList.add('is-selected');
         }
@@ -105,3 +136,28 @@ function thumbCarousal() {
     thumbCarousal();
   });
   
+
+
+
+  var Cards = document.querySelectorAll("#cardList > div");
+document.addEventListener("DOMContentLoaded", function () {
+  currentHighlight = 0;
+  const N = 3; // interval in seconds
+  function changeActiveState() {
+    currentHighlight = (currentHighlight + 1) % Cards.length;
+    for (var i = 0; i < Cards.length; i++) {
+      Cards[i].classList.remove("active");
+    }
+    // console.log("this ", currentHighlight)
+    Cards[currentHighlight].classList.add("active");
+  }
+  setInterval(changeActiveState, N * 1000);
+});
+
+function hoverActiveState () {
+    Cards[i].classList.add('dropdown-show');
+}
+
+for (var i = 0; i < Cards.length; i++) {
+    Cards.addEventListener('mouseenter', hoverActiveState)
+}
