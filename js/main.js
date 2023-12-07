@@ -21,31 +21,23 @@ $(document).ready(function() {
  // Function to add and remove a class to each div one by one
  const addAndRemoveClassOneByOne = () => {
   let currentIndex = 0;
-
+  const elements = $('.clm-list-content');
   const addClass = () => {
-    console.log("currentIndex > 0",currentIndex > 0)
-    // Add class to the current div
-    $('.clm-list-content:eq(' + currentIndex + ')').addClass('clm-list-selected');
+    elements.removeClass('clm-list-selected');
+    $(elements[currentIndex]).addClass('clm-list-selected'); 
+    currentIndex = (currentIndex + 1) % elements.length; 
 
-    // Remove class from the previous div (if not the first div)
-    if (currentIndex > 0) {
-      $('.clm-list-content:eq(' + (currentIndex - 1) + ')').removeClass('clm-list-selected');
-    }
-
-    currentIndex++;
-
-    // Reset to the first div if reached the last div
-    if (currentIndex >= $('.clm-list-content').length) {
-      currentIndex = 0;
-    }
-
-    // Call the function recursively with a time interval
-    setTimeout(addClass, 2000); // Add a class every 2000 milliseconds (2 seconds) interval
+    setTimeout(addClass, 3000);
   };
-
-  // Call the function initially
   addClass();
 };
+addAndRemoveClassOneByOne();
+
+
+
+
+
+
 
 
 
@@ -142,7 +134,7 @@ function thumbCarousal() {
 
 
 
-  var Cards = document.querySelectorAll("#cardList > div");
+var Cards = document.querySelectorAll("#cardList > div");
 document.addEventListener("DOMContentLoaded", function () {
   currentHighlight = 0;
   const N = 3; // interval in seconds
