@@ -350,7 +350,6 @@ ul li {
     -o-transform: rotate(180deg);
 }
 
-.nav-list li:hover a svg {}
 
 .header-overlay {
     background-color: rgba(246, 246, 249, 0.90);
